@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./style.css">
+        <title>Tic Tac Toe - Game</title>
+    </head>
+    <body>
+
+        <!-- <p class="score-x" id="score-x">Player X: </p>
+        <p class="score-o" id="score-o">Player O: </p> -->
+
+        <p class="gameselect" id="start-text">Tic Tac Toe</p>
+        <table class="startselect" id="start-table">
+            <td>
+                <button class='start-button' id="start-table" onclick='Start(); Select();'>PLAY</button>
+            </td>
+        </table>
+
+        <p class="pselect" id="sel-text">Player Selection</p>
+        <table class="select" id="sel-table">
+            <td>
+                <button class='round-button' id="x" onclick='Game(); PSelect("x");'>x</button>
+            </td>
+            <td>
+                <button class='round-button' id="o" onclick='Game(); PSelect("o");'>o</button>
+            </td>
+        </table>
+
+        <p class="pgame" id="game-text">Tic Tac Toe</p>
+        <p class="selplayer" id="player-text">Current Player: </p>
+
+        <table class="restartreset" id="rr-btn">
+            <td>
+                <button class='start-button' id="restart" onclick='rr_Restart();'>Restart</button>
+            </td>
+            <td>
+                <button class='start-button' id="reset" onclick='rr_Reset()'>Reset</button>
+            </td>
+        </table>
+        <table class="center" id="table-btn">
+            <tr>
+                <td>
+                    <button class='button' id="1" onclick='Draw(1); Row(); ChangePlayer();'></button>
+                </td>
+                <td>
+                    <button class='button' id="2" onclick='Draw(2); Row(); ChangePlayer();'></button>
+                </td>
+                <td>
+                    <button class='button' id="3" onclick='Draw(3); Row(); ChangePlayer();'></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class='button' id="4" onclick='Draw(4); Row(); ChangePlayer();'></button>
+                </td>
+                <td>
+                    <button class='button' id="5" onclick='Draw(5); Row(); ChangePlayer();'></button>
+                </td>
+                <td>
+                    <button class='button' id="6" onclick='Draw(6); Row(); ChangePlayer();'></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class='button' id="7" onclick='Draw(7); Row(); ChangePlayer();'></button>
+                </td>
+                <td>
+                    <button class='button' id="8" onclick='Draw(8); Row(); ChangePlayer();'></button>
+                </td>
+                <td>
+                    <button class='button' id="9" onclick='Draw(9); Row(); ChangePlayer();'></button>
+                </td>
+            </tr>
+        </table>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

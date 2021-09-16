@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+
+.button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #999;
+}
+
+.start-button {
+    height: 50px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15%;
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+  }
+
+.start-button:hover {
+    background-color: #999;
+    color: black;
+}
+
+.score-x {
+    display: table;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 50px;
+}
+
+.score-o {
+    display: table;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 50px;
+}
+
+.round-button {
+    height: 70px;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: transparent;
+    font-size: x-large;
+    color: white;
+    cursor: pointer;
+  }
+
+.round-button:hover {
+    background-color: #999;
+    color: black;
+}
+
+.pselect {
+    display: none;
+    margin-left: auto; 
+    margin-right: auto;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: xx-large;
+}
+
+.gameselect {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 50px;
+}
+
+.pgame {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: xx-large;
+}
+
+.selplayer {
+    display: none;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: medium;
+}
+
+.operator {
+    background-color: #ddd;
+}
+
+#eingabe {
+    background-color: #ddd;
+    border: 1px solid black;
+}
+
+#ergebnis {
+    border: 1px solid gray;
+}
+
+table.startselect {
+    display: table;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+table.restartreset {
+    display: none;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+table.center {
+    display: none;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+table.select {
+    display: none;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+html, body {
+    height: 100%;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+html {
+    display: table;
+    width: 100%;
+}
+body {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    background-color: #35363a;
+}
