@@ -11,6 +11,7 @@
         <p class="score-o" id="score-o">Player O: </p> -->
 
         <p class="gameselect" id="start-text">Tic Tac Toe</p>
+        <p class="minigametext" id="start-minitxt">with auto player change</p>
         <table class="startselect" id="start-table">
             <td>
                 <button class='start-button' id="start-table" onclick='Start(); Select();'>PLAY</button>
@@ -18,6 +19,7 @@
         </table>
 
         <p class="pselect" id="sel-text">Player Selection</p>
+        <p class="miniseltext" id="sel-minitxt">selected player starts</p>
         <table class="select" id="sel-table">
             <td>
                 <button class='round-button' id="x" onclick='Game(); PSelect("x");'>x</button>
@@ -27,15 +29,16 @@
             </td>
         </table>
 
-        <p class="pgame" id="game-text">Tic Tac Toe</p>
-        <p class="selplayer" id="player-text">Current Player: </p>
+        <p class="gametitle" id="game-text">Tic Tac Toe</p>
+        <p class="scoretxt" id="scoretxt">X Score: 0 | O Score: 0</p>
+        <p class="currentselp" id="cplayer-text">Current Player: </p>
 
         <table class="restartreset" id="rr-btn">
             <td>
-                <button class='start-button' id="restart" onclick='rr_Restart();'>Restart</button>
+                <button class='rr-button' id="restart" onclick='rr_Restart();'>Restart</button>
             </td>
             <td>
-                <button class='start-button' id="reset" onclick='rr_Reset()'>Reset</button>
+                <button class='rr-button' id="reset" onclick='rr_Reset()'>Reset</button>
             </td>
         </table>
         <table class="center" id="table-btn">

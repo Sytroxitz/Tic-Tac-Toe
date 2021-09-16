@@ -1,8 +1,11 @@
 var currentp = null
+var firstselp = null;
+
 var player_x = "x"
 var player_o = "o"
 
-var score = 0;
+var score_x = 0
+var score_o = 0
 
 var btnElement1 = document.getElementById("1")
 var btnElement2 = document.getElementById("2")
@@ -17,8 +20,11 @@ var btnElement9 = document.getElementById("9")
 function Start()
 {
     let starttext = document.getElementById("start-text").style
+    let startminitxt = document.getElementById("start-minitxt").style
     let starttable = document.getElementById("start-table").style
+
     starttext.display = "none";
+    startminitxt.display = "none";
     starttable.display = "none";
     return PSelect();
 }
@@ -27,34 +33,42 @@ function Select()
 {
     let selection = document.getElementById("sel-table").style
     let seltext = document.getElementById("sel-text").style
+    let selminitxt = document.getElementById("sel-minitxt").style
 
     selection.display = "table";
     seltext.display = "table";
+    selminitxt.display = "table";
 }
 
 function Game()
 {
-    let gamehidden = document.getElementById("table-btn").style
+    let tablegame = document.getElementById("table-btn").style
     let selection = document.getElementById("sel-table").style
     let seltext = document.getElementById("sel-text").style
+    let selminitxt = document.getElementById("sel-minitxt").style
     let gametext = document.getElementById("game-text").style
-    let playertext = document.getElementById("player-text").style
+    let scoretxt = document.getElementById("scoretxt").style
+    let cplayertext = document.getElementById("cplayer-text").style
     let rrbtn = document.getElementById("rr-btn").style
 
-    gamehidden.display = "table";
+    tablegame.display = "table";
     selection.display = "none";
     seltext.display = "none";
+    selminitxt.display = "none";
     gametext.display = "table";
-    playertext.display = "table";
+    scoretxt.display = "table";
+    cplayertext.display = "table";
     rrbtn.display = "table";
 }
 
 function PSelect(player)
 {
     currentp = player;
-    let selp = document.getElementById("player-text")
+    firstselp = player;
+
+    let selp = document.getElementById("cplayer-text")
     selp.innerHTML = "Current Player: " + player;
-    return currentp;
+    return currentp && firstselp;
 }
 
 function Draw(box)
@@ -89,10 +103,16 @@ function Row()
         {
 
         document.getElementById("game-text").innerHTML = "Winner: " + currentp.toUpperCase();
-        document.getElementById("player-text").style.color = "transparent";
+        document.getElementById("cplayer-text").style.color = "transparent";
         
         Score(currentp);
         DisableBtn();
+    }
+    
+    else if ((btn1 && btn2 && btn3 && btn4 && btn5 && btn6 && btn7 && btn8 && btn9) != "")
+    {
+        DisableBtn();
+        setTimeout(() => rr_Restart(), 1000);
     }
 }
 
@@ -103,7 +123,13 @@ function rr_Restart()
 
 function rr_Reset()
 {
-    window.location.reload();
+    //window.location.reload();
+    currentp = firstselp;
+    document.getElementById("cplayer-text").innerHTML = "Current Player: " + firstselp;
+    
+    score_x = 0;
+    score_o = 0;
+    EnableBtn();
 }
 
 function DisableBtn()
@@ -132,12 +158,22 @@ function EnableBtn()
     btnElement9.disabled = false;      btnElement9.style.cursor = "";      btnElement9.style.backgroundColor = "transparent";      btnElement9.innerHTML = "";
 
     document.getElementById("game-text").innerHTML = "Tic Tac Toe";
-    document.getElementById("player-text").style.color = "white";
+    document.getElementById("cplayer-text").style.color = "rgba(255, 255, 255, 0.596)";
 }
 
 function Score(player)
 {
-    return;
+    if (player == player_x)
+    {
+        score_x++;
+        document.getElementById("scoretxt").innerHTML = "X Score: " + score_x + " | O Score: " + score_o;
+    }
+
+    else if (player == player_o)
+    {
+        score_o++;
+        document.getElementById("scoretxt").innerHTML = "X Score: " + score_x + " | O Score: " + score_o;
+    }
 }
 
 function ChangePlayer()
@@ -145,14 +181,14 @@ function ChangePlayer()
     if (currentp == player_x)
     {
         currentp = player_o;
-        document.getElementById("player-text").innerHTML = "Current Player: " + currentp;
+        document.getElementById("cplayer-text").innerHTML = "Current Player: " + currentp;
         return currentp;
     }
 
     else if (currentp == player_o)
     {
         currentp = player_x;
-        document.getElementById("player-text").innerHTML = "Current Player: " + currentp;
+        document.getElementById("cplayer-text").innerHTML = "Current Player: " + currentp;
         return currentp;
     }
 }

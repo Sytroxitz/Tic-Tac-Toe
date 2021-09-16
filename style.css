@@ -7,14 +7,16 @@
     height: 100px;
     background-color: transparent;
     border: 1px solid white;
+    border-radius: 10%;
     font-size: x-large;
     color: white;
     cursor: pointer;
 }
 
+/*
 .button:hover {
     background-color: #999;
-}
+}*/
 
 .start-button {
     height: 50px;
@@ -74,6 +76,8 @@
     display: none;
     margin-left: auto; 
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
     font-family: 'Signika Negative', sans-serif;
     font-size: xx-large;
 }
@@ -83,42 +87,82 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     font-family: 'Signika Negative', sans-serif;
     font-size: 50px;
 }
 
-.pgame {
+.minigametext {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.596);
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 20px;
+}
+
+.miniseltext {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.596);
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 20px;
+}
+
+.gametitle {
     display: none;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
     font-family: 'Signika Negative', sans-serif;
-    font-size: xx-large;
+    font-size: 50px;
 }
 
-.selplayer {
+.currentselp {
+    display: none;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.596);
+    font-family: 'Signika Negative', sans-serif;
+    font-size: large;
+}
+
+.scoretxt {
     display: none;
     margin-left: auto; 
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    color: rgba(255, 255, 255, 0.596);
     font-family: 'Signika Negative', sans-serif;
-    font-size: medium;
+    font-size: larger;
 }
 
-.operator {
-    background-color: #ddd;
-}
+.rr-button {
+    height: 50px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15%;
+    border: 1px solid white;
+    border-color: rgba(255, 255, 255, 0.596);
+    background-color: transparent;
+    font-size: large;
+    color: rgba(255, 255, 255, 0.596);
+    cursor: pointer;
+  }
 
-#eingabe {
-    background-color: #ddd;
-    border: 1px solid black;
-}
-
-#ergebnis {
-    border: 1px solid gray;
+.rr-button:hover {
+    background-color: #999;
+    color: black;
 }
 
 table.startselect {
@@ -131,6 +175,7 @@ table.restartreset {
     display: none;
     margin-left: auto; 
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 table.center {
