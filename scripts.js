@@ -1,5 +1,5 @@
 var currentp = null
-var firstselp = null;
+var firstselp = null
 
 var player_x = "x"
 var player_o = "o"
@@ -129,6 +129,7 @@ function rr_Reset()
     
     score_x = 0;
     score_o = 0;
+    document.getElementById("scoretxt").innerHTML = "X Score: " + score_x + " | O Score: " + score_o;
     EnableBtn();
 }
 
