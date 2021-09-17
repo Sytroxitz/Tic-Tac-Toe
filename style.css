@@ -36,24 +36,6 @@
     color: black;
 }
 
-.score-x {
-    display: table;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    font-family: 'Signika Negative', sans-serif;
-    font-size: 50px;
-}
-
-.score-o {
-    display: table;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    font-family: 'Signika Negative', sans-serif;
-    font-size: 50px;
-}
-
 .round-button {
     height: 70px;
     width: 70px;
